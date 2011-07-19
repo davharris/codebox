@@ -23,6 +23,7 @@
 
 slopegraph <- function(data, label.cex=0.9, axis.cex=0.9, digits = 2, rounding.method = NULL, mymain = "slopegraph", ...) {
   require(plotrix)
+  data = as.matrix(data)
   if(!is.null(rounding.method)){
     fmt <- .rd.method(rounding.method, width, digits)
     data.annot <- sprintf(fmt, data)
